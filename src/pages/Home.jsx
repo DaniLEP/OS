@@ -38,7 +38,7 @@ export default function Home() {
     <Header />
     <div>
       <div style={containerStyle}>
-        <Link to="/registerOS" style={linkStyle}>
+        <Link to="/OS/registerOS" style={linkStyle}>
           <img
             src="/cadastro.png"
             alt="Cadastro"
@@ -48,7 +48,7 @@ export default function Home() {
           />
         </Link>
 
-        <Link to="/listOS" style={linkStyle}>
+        <Link to="/OS/listOS" style={linkStyle}>
           <img
             src="/os.png"
             alt="OS"
@@ -57,8 +57,8 @@ export default function Home() {
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           />
         </Link>
-
-        <Link to="/relatorio" style={linkStyle}>
+s
+        <Link to="/OS/relatorio" style={linkStyle}>
           <img
             src="/relatórios.png"
             alt="Relatórios"
