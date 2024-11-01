@@ -17,7 +17,7 @@ export default function Login() {
     ) {
       alert('Login bem-sucedido!');
       setErrorMessage('');
-      navigate('/Home'); // Redireciona para a home usando useNavigate
+      navigate("/Home"); // Redireciona para a home usando useNavigate
     } else {
       setErrorMessage('E-mail ou senha incorretos.');
     }
@@ -100,7 +100,7 @@ export default function Login() {
           alt="Logo da Reciclar"
           style={styles.logo}
         />
-        <h2 style={styles.h2}>Cadastro de OS TI</h2>
+        <h2 style={styles.h2}>T.I - Instituto Reciclar</h2>
         <form id="loginForm" onSubmit={handleSubmit}>
           <label htmlFor="email" style={styles.label}>
             E-mail:

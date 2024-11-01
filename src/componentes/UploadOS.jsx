@@ -41,6 +41,17 @@ const CadastroForm = () => {
   const handleReset = () => setFormData(initialFormData);
 
   const handleHome = () => (window.location.href = "/Cadastro");
+  
+  const logoStyle = {
+    width: '100px',
+    position: 'relative',
+    left: '-68vh',
+    top: '1vh',
+    height: "50px", 
+    cursor: "pointer"
+  };
+  
+
 
   const styles = {
     container: {
@@ -99,7 +110,7 @@ const CadastroForm = () => {
         <img
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
           alt="Logo Esquerdo"
-          style={{ height: "50px", cursor: "pointer" }}
+          style={logoStyle}
           onClick={handleHome}
         />
         <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center" }}>
@@ -148,7 +159,48 @@ const CadastroForm = () => {
             {
               id: "solicitante",
               label: "Solicitante",
-              options: ["ESCOLHA O SOLICITANTE", "Ana Paula Felix Damas", /* outras opções... */],
+              options: ["ESCOLHA O SOLICITANTE",  "Ana Paula Felix Damas",
+                "Anderson Braghin Rosseto",
+                "Bruna Cristina Correia Porto",
+                "Carlos Henrique de Lima",
+                "Carolina Roberta Peixoto do Nascimento",
+                "Ciro Gustavo Barbosa de Oliveira",
+                "Cleyson Aparecido Brito",
+                "Daiane da Silva dos Santos",
+                "Danilo Santos Manzoli",
+                "Débora Praxades de Souza",
+                "Edilaine de Souza Santos",
+                "Eleilde Barbosa Santos",
+                "Elisa Lima Villaméa Cotta",
+                "Evandro Nogueira Santana Junior",
+                "Fabrícia Santos da Silva",
+                "Flavia Mello Rezende de Pinho",
+                "Gabrielly Souza Lemes Guedes De Oliveira",
+                "Gleydson Aparecido de Britto",
+                "GPS",
+                "Isadora Bonetto Ferrari",
+                "Jaqueline das Virgens",
+                "Jenifer de Jesus Brito",
+                "Jéssica de Assis Figueiredo",
+                "João Pedro Viana Corrêa",
+                "João Vitor Naldi dos Santos",
+                "JOVENS",
+                "Karoline Barbosa Beretta",
+                "Larissa Cristina Daniel Ferreira",
+                "Luciano Rodrigues de Lima",
+                "Luisa Nascimento Handro",
+                "Maria Beatriz Calaresi Ricca",
+                "Maria das Neves Amador Umbelino",
+                "Maria José dos Santos",
+                "Maria Mislene Pereira Lages",
+                "Natália Rosa Muniz Sierpinski",
+                "Paulo Henrique Yaekashi",
+                "Rafael de Souza Villares",
+                "Rosilene Teodora Batista de Sousa",
+                "Tainá Diogo da Silva",
+                "Thainá Oliveira de Sousa",
+                "Vivian Lavander Mendonça",
+                "Viviane de Jesus do Nascimento"],
             },
             {
               id: "departamento",
@@ -157,7 +209,11 @@ const CadastroForm = () => {
                 "ESCOLHA O DEPARTAMENTO",
                 "ADMINISTRATIVO / FINANCEIRO",
                 "COMUNICAÇÃO",
-                /* outras opções... */
+                "DI",
+                "EQUIPE/EDUCACIONAL",
+                "JOVENS/EDUCACIONAL",
+                "RH",
+                "T.I"
               ],
             },
             {
@@ -167,6 +223,36 @@ const CadastroForm = () => {
                 "ESCOLHA O PROBLEMA",
                 "ARTE FINAL",
                 "CAMERA",
+                "CAMERA FOTOGRAFICA",
+                "COMPUTADOR NÃO LIGA",
+                "CONEXÃO PROJETOR",
+                "FALHA DE LOGIN SERVIDOR",
+                "FALHA IMPRESSORA",
+                "FALHA ROTEADOR",
+                "FALHA SWITCHES",
+                "FONTE",
+                "FORMATAÇÃO DE PC",
+                "GOOGLE MEET",
+                "IP",
+                "ORGANIZAÇÃO",
+                "MICROFONE",
+                "PACOTE OFFICE",
+                "PANICO",
+                "PC TRAVANDO",
+                "PROBLEMA COM SENHA",
+                "QUEDA DE INTERNET",
+                "SENHA E-MAIL",
+                "TEAMS",
+                "TROCA DE BATERIA",
+                "TROCA DE HD",
+                "TROCA DE MEMORIA RAM",
+                "TROCA DE MOUSE",
+                "TROCA DE TECLADO",
+                "TROCA DE TELA",
+                "TROCA DE TONER",
+                "VELOCIDADE DE INTERNET",
+                "CHAVEIRO",
+                "ZOOM",
                 /* outras opções... */
               ],
             },

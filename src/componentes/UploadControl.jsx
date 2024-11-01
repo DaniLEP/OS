@@ -70,7 +70,7 @@ const DataForm = () => {
   const logoStyle = {
     width: '100px',
     position: 'relative',
-    left: '-40vh',
+    left: '-62vh',
     top: '1vh'
   };
 
