@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  
+  const navigate = useNavigate(); // Hook para navegação
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +17,7 @@ export default function Login() {
     ) {
       alert('Login bem-sucedido!');
       setErrorMessage('');
-      window.location.href = '/Home'; // Redireciona para a home
+      navigate('/Home'); // Redireciona para a home usando useNavigate
     } else {
       setErrorMessage('E-mail ou senha incorretos.');
     }
