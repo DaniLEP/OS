@@ -40,7 +40,11 @@ export default function Home() {
     <Header />
     <div>
       <div style={containerStyle}>
+<<<<<<< HEAD
         <Link to="/Cadastro" style={linkStyle}>
+=======
+        <Link to="/OS/registerOS" style={linkStyle}>
+>>>>>>> a7875e72c5635d845d547bc01db902195fdee69f
           <img
             src="/cadastro1.png"
             alt="Cadastro"
@@ -50,7 +54,11 @@ export default function Home() {
           />
         </Link>
 
+<<<<<<< HEAD
         <Link to="/Lista_Controles" style={linkStyle}>
+=======
+        <Link to="/OS/listOS" style={linkStyle}>
+>>>>>>> a7875e72c5635d845d547bc01db902195fdee69f
           <img
             src="/os.png"
             alt="controles"
@@ -59,8 +67,8 @@ export default function Home() {
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           />
         </Link>
-
-        <Link to="/relatorio" style={linkStyle}>
+s
+        <Link to="/OS/relatorio" style={linkStyle}>
           <img
             src="/relatórios.png"
             alt="Relatórios"
