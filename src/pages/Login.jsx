@@ -29,7 +29,7 @@ export default function Login() {
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
-      width:'1515px'
+      margin: 0, // Remove a margem padrão
     },
     
     loginContainer: {
@@ -40,7 +40,6 @@ export default function Login() {
       border: '2px solid #00b894', // Bordas verdes sutis
       textAlign: 'center',
       width: '350px',
-      position: 'relative',
     },
     h2: {
       color: '#ffffff', // Texto branco

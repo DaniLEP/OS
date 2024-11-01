@@ -4,7 +4,7 @@ export default function Header() {
   const headerStyle = {
     backgroundColor: '#00009C',
     color: 'white',
-    padding: '30px',
+    padding: '10px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -23,7 +23,7 @@ export default function Header() {
   const h1Style = {
     fontSize: '30px',
     display: 'inline-block',
-    verticalAlign: 'center',
+    marginLeft: '-50px'
   };
 
   const homeIconStyle = {
