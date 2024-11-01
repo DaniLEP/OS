@@ -40,7 +40,7 @@ export default function Home() {
     <Header />
     <div>
       <div style={containerStyle}>
-        <Link to="/registerOS" style={linkStyle}>
+        <Link to="/Cadastro" style={linkStyle}>
           <img
             src="/cadastro1.png"
             alt="Cadastro"
@@ -50,7 +50,7 @@ export default function Home() {
           />
         </Link>
 
-        <Link to="/OS/listOS" style={linkStyle}>
+        <Link to="/Lista_Controles" style={linkStyle}>
           <img
             src="/os.png"
             alt="controles"
@@ -60,7 +60,7 @@ export default function Home() {
           />
         </Link>
 s
-        <Link to="/OS/relatorio" style={linkStyle}>
+        <Link to="#" style={linkStyle}>
           <img
             src="/relatórios.png"
             alt="Relatórios"
