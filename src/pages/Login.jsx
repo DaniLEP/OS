@@ -14,7 +14,7 @@ export default function Login() {
     ) {
       alert('Login bem-sucedido!');
       setErrorMessage('');
-      window.location = '/home'; // Redireciona para a home
+      window.location = '/Home'; // Redireciona para a home
     } else {
       setErrorMessage('E-mail ou senha incorretos.');
     }

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css"; // Certifique-se de que este arquivo existe
 import App from "./App.jsx"; // Verifique se o caminho está correto
 
+// R0TAS
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: '/home',
+        path: '/Home',
         element: <Home />,
       },
       {
