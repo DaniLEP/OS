@@ -40,11 +40,7 @@ export default function Home() {
     <Header />
     <div>
       <div style={containerStyle}>
-<<<<<<< HEAD
-        <Link to="/Cadastro" style={linkStyle}>
-=======
-        <Link to="/OS/registerOS" style={linkStyle}>
->>>>>>> a7875e72c5635d845d547bc01db902195fdee69f
+        <Link to="/registerOS" style={linkStyle}>
           <img
             src="/cadastro1.png"
             alt="Cadastro"
@@ -54,11 +50,7 @@ export default function Home() {
           />
         </Link>
 
-<<<<<<< HEAD
-        <Link to="/Lista_Controles" style={linkStyle}>
-=======
         <Link to="/OS/listOS" style={linkStyle}>
->>>>>>> a7875e72c5635d845d547bc01db902195fdee69f
           <img
             src="/os.png"
             alt="controles"
