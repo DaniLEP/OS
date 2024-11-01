@@ -12,12 +12,14 @@ import CadastroForm from "./componentes/UploadOS.jsx";
 import ListOS from "./componentes/List_OS.jsx";
 import ListControl from "./pages/Listas.jsx";
 import RegisterList from "./pages/RegisterList.jsx";
+import ErrorPage from "./componentes/errorPage.jsx";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
