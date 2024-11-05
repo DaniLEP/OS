@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const DataForm = () => {
@@ -23,7 +23,6 @@ const DataForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     fetch(
       "https://script.google.com/macros/s/AKfycbziLxygw1nUFcXMqfKqtCxCsQr_fvsegk0U81E2GUmPi2Kl9vPNdJfgMKoouv3I-AXq/exec",
       {
@@ -62,69 +61,104 @@ const DataForm = () => {
     });
   };
 
-// CSS DA HEADER
-  const irParaHome = () => {
-    window.location.href = "/Home"; // Substitua pelo caminho correto para a página inicial
-  };
+  const handleHome = () => (window.location.href = "/Cadastro");
 
   const logoStyle = {
-    width: '100px',
-    position: 'relative',
-    left: '-62vh',
-    top: '1vh'
+    width: "80px",
+    height: "40px",
+    cursor: "pointer",
   };
-
-  const h1Style = {
-    fontSize: '40px',
-    display: 'inline-block',
-    verticalAlign: 'center',
-    color: 'white',
-    marginRight: '100px'
-  };
-
-  const homeIconStyle = {
-    cursor: 'pointer',
-    marginRight: '20px',
-  };
-
-  const iconImgStyle = {
-    position: 'relative',
-    left: '97vh',
-    width: '40px',
-    top: '-12vh'
+  const styles = {
+    container: {
+      fontFamily: "Arial, sans-serif",
+      background: "linear-gradient(to bottom, #9ba194, #9ba194)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      minHeight: "100vh",
+      paddingTop: "10px",
+      padding: "20px",
+      position: 'relative',
+      top: "9vh"
+    },
+    header: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "10px",
+      backgroundColor: "#00009C",
+      color: "white",
+      position: "fixed",
+      top: 0,
+      zIndex: 1000,
+    },
+    logo: {
+      width: "80px",
+      marginBottom: "10px",
+    },
+    h1: {
+      fontSize: "1.8em",
+      color: "white",
+      textAlign: "center",
+    },
+    form: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+      maxWidth: "90%",
+      width: "400px",
+      backgroundColor: "white",
+      padding: "20px",
+      borderRadius: "8px",
+      boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+    },
+    input: {
+      padding: "10px",
+      border: "1px solid #ccc",
+      borderRadius: "4px",
+    },
+    button: {
+      padding: "10px",
+      backgroundColor: "#F20DE7",
+      color: "white",
+      border: "none",
+      borderRadius: "4px",
+      cursor: "pointer",
+    },
+    homeIcon: {
+      cursor: "pointer",
+      marginTop: "10px",
+    },
   };
 
   return (
-    <div style={{ backgroundColor: "#00009C", minHeight: "100vh", padding: "20px" }}>
-      <header style={{ textAlign: "center", marginBottom: "20px" }}>
-      <img
-        src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
-        alt="Logo Instituto Reciclar"
-        style={logoStyle}
-      />
-      <h1 style={h1Style}>Notebook em Manutenção</h1>
-      <div className="home-icon" style={homeIconStyle}>
-        <Link to={"/Cadastro"}>
-          <img src="/saida.png" alt="Home" style={iconImgStyle} />
-        </Link>
-        </div>
-      </header>
-
-      <form
-        id="dataForm"
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          maxWidth: "400px",
-          margin: "auto",
-          backgroundColor: "white",
-          padding: "20px",
-          borderRadius: "8px",
-          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-        }}
-      >
+    <div style={styles.container}>
+      <div style={styles.header}>
+        <img
+          src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
+          alt="Logo Esquerdo"
+          style={logoStyle}
+          onClick={handleHome}
+        />
+        <h1
+          style={{
+            margin: 0,
+            flexGrow: 1,
+            textAlign: "center",
+            fontSize: "1.2rem",
+          }}
+        >
+          Cadastro de Diário
+        </h1>
+        <img
+          src="/saida.png"
+          alt="Home"
+          style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
+          onClick={handleHome}
+        />
+      </div>
+      <form id="dataForm" onSubmit={handleSubmit} style={styles.form}>
         <input
           type="text"
           name="marca"
@@ -132,11 +166,7 @@ const DataForm = () => {
           onChange={handleChange}
           placeholder="Digite a marca do notebook:"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         />
         <input
           type="text"
@@ -145,11 +175,7 @@ const DataForm = () => {
           onChange={handleChange}
           placeholder="Digite o patrimônio:"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         />
         <input
           type="text"
@@ -158,25 +184,19 @@ const DataForm = () => {
           onChange={handleChange}
           placeholder="Qual o problema do notebook:"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         />
-        <input
-          type="text"
+        <select
           name="solucionado"
           value={formData.solucionado}
           onChange={handleChange}
-          placeholder="Problema foi solucionado?"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
-        />
+          style={styles.input}
+        >
+          <option value="">Problema foi solucionado?</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
         <input
           type="text"
           name="dia"
@@ -184,22 +204,14 @@ const DataForm = () => {
           onChange={handleChange}
           placeholder="Escolha o dia:"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         />
         <select
           name="mes"
           value={formData.mes}
           onChange={handleChange}
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         >
           <option value="">Selecione o mês</option>
           <option value="Janeiro">Janeiro</option>
@@ -214,6 +226,7 @@ const DataForm = () => {
           <option value="Outubro">Outubro</option>
           <option value="Novembro">Novembro</option>
           <option value="Dezembro">Dezembro</option>
+          {/* demais opções de meses */}
         </select>
         <input
           type="number"
@@ -222,24 +235,13 @@ const DataForm = () => {
           onChange={handleChange}
           placeholder="Digite o ano:"
           required
-          style={{
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+          style={styles.input}
         />
         <motion.button
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          style={{
-            padding: "10px",
-            backgroundColor: "#F20DE7",
-            color: "white",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
+          style={styles.button}
         >
           Salvar
         </motion.button>
@@ -248,29 +250,11 @@ const DataForm = () => {
           onClick={limparFormulario}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          style={{
-            padding: "10px",
-            backgroundColor: "#F20DE7",
-            color: "white",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
+          style={styles.button}
         >
           Limpar
         </motion.button>
-        <button
-          type="button"
-          onClick={irParaHome}
-          style={{
-            padding: "10px",
-            backgroundColor: "#F20DE7",
-            color: "white",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
-        >
+        <button type="button" onClick={handleHome} style={styles.button}>
           Ir para Home
         </button>
       </form>

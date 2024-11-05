@@ -41,17 +41,12 @@ const CadastroForm = () => {
   const handleReset = () => setFormData(initialFormData);
 
   const handleHome = () => (window.location.href = "/Cadastro");
-  
-  const logoStyle = {
-    width: '100px',
-    position: 'relative',
-    left: '-68vh',
-    top: '1vh',
-    height: "50px", 
-    cursor: "pointer"
-  };
-  
 
+  const logoStyle = {
+    width: '80px',
+    height: "40px",
+    cursor: "pointer",
+  };
 
   const styles = {
     container: {
@@ -61,7 +56,10 @@ const CadastroForm = () => {
       flexDirection: "column",
       alignItems: "center",
       minHeight: "100vh",
-      paddingTop: "80px",
+      paddingTop: "30px",
+      padding: "20px",
+      position: 'relative',
+      top: "9vh"
     },
     header: {
       width: "100%",
@@ -80,13 +78,19 @@ const CadastroForm = () => {
       padding: "20px",
       borderRadius: "8px",
       boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-      width: "80%",
+      width: "100%",
       maxWidth: "600px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      gap: "10px",
     },
-    input: { padding: "8px", marginTop: "5px", width: "100%" },
+    input: {
+      padding: "8px",
+      marginTop: "5px",
+      width: "100%",
+      fontSize: "1rem",
+    },
     button: {
       marginTop: "10px",
       padding: "10px",
@@ -96,6 +100,7 @@ const CadastroForm = () => {
       borderRadius: "4px",
       cursor: "pointer",
       width: "100%",
+      fontSize: "1rem",
     },
     submitButton: {
       backgroundColor: "#F20DE7",
@@ -113,13 +118,13 @@ const CadastroForm = () => {
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center" }}>
+        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
           Cadastro de OS
         </h1>
         <img
           src="/saida.png"
           alt="Home"
-          style={{ height: "50px", cursor: "pointer", marginRight: "20px" }}
+          style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
           onClick={handleHome}
         />
       </div>
@@ -153,8 +158,8 @@ const CadastroForm = () => {
               )}
             </div>
           ))}
-
           {/* Campos de seleção */}
+
           {[
             {
               id: "solicitante",
@@ -253,6 +258,7 @@ const CadastroForm = () => {
                 "VELOCIDADE DE INTERNET",
                 "CHAVEIRO",
                 "ZOOM",
+                "OUTROS",
                 /* outras opções... */
               ],
             },
