@@ -214,7 +214,6 @@ const DataForm = () => {
           style={styles.input}
         >
           <option value="">Selecione o mês</option>
-          <option value="">Selecione o mês</option>
           <option value="Janeiro">Janeiro</option>
           <option value="Fevereiro">Fevereiro</option>
           <option value="Março">Março</option>
