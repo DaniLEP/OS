@@ -5,8 +5,8 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  
-  const navigate = useNavigate(); // Hook para navegação
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,64 +17,67 @@ export default function Login() {
     ) {
       alert('Login bem-sucedido!');
       setErrorMessage('');
-      navigate("/Home"); // Redireciona para a home usando useNavigate
+      navigate("/Home");
     } else {
       setErrorMessage('E-mail ou senha incorretos.');
     }
   };
 
-  // Definição de estilos inline
   const styles = {
     body: {
       fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#f5f5f5', // Cor de fundo clara e suave
+      backgroundColor: '#f5f5f5',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh',
-      margin: 0, // Remove a margem padrão
+      minHeight: '100vh',
+      margin: 0,
+      boxSizing: 'border-box',
+      overflow: 'hidden',  // Remove a rolagem
     },
-    
     loginContainer: {
-      backgroundColor: '#00009C', // Azul escuro
-      padding: '40px',
+      backgroundColor: '#00009C',
+      padding: '30px',
       borderRadius: '20px',
-      boxShadow: '1px 15px 20px rgba(0, 0, 0, 0.2)', // Sombra para profundidade
-      border: '2px solid #00b894', // Bordas verdes sutis
+      boxShadow: '1px 15px 20px rgba(0, 0, 0, 0.2)',
+      border: '2px solid #00b894',
       textAlign: 'center',
-      width: '350px',
+      width: '100%',
+      maxWidth: '350px',
+      boxSizing: 'border-box',
     },
     h2: {
-      color: '#ffffff', // Texto branco
+      color: '#ffffff',
       marginBottom: '20px',
       fontSize: '24px',
     },
     logo: {
-      width: '80px', // Tamanho do logo ajustado
+      width: '80px',
       marginBottom: '20px',
     },
     label: {
       display: 'block',
       marginBottom: '8px',
-      color: '#ffffff', // Texto branco
+      color: '#ffffff',
       textAlign: 'left',
       fontSize: '14px',
       fontWeight: 'bold',
     },
     input: {
-      width: '91%',
+      width: '100%',
       padding: '12px',
       marginBottom: '15px',
       border: 'none',
       borderRadius: '5px',
       fontSize: '14px',
       backgroundColor: 'white',
-      color: 'black'
+      color: 'black',
+      boxSizing: 'border-box',
     },
     button: {
       width: '100%',
       padding: '12px',
-      backgroundColor: '#F20DE7', // Cor principal do botão
+      backgroundColor: '#F20DE7',
       border: 'none',
       borderRadius: '5px',
       color: 'white',
@@ -83,7 +86,7 @@ export default function Login() {
       transition: 'background-color 0.3s ease',
     },
     buttonHover: {
-      backgroundColor: '#00FF62', // Cor do hover do botão
+      backgroundColor: '#00FF62',
     },
     errorMessage: {
       color: 'red',
