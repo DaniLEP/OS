@@ -59,7 +59,7 @@ const CadastroForm = () => {
       paddingTop: "30px",
       padding: "20px",
       position: 'relative',
-      top: "9vh"
+      top: "7vh"
     },
     header: {
       width: "100%",
@@ -268,6 +268,11 @@ const CadastroForm = () => {
               label: "Técnico Responsável",
               options: ["ESCOLHA O TÉCNICO", "CLEYSON", "DANILO"],
             },
+            {
+              id: "status",
+              label: "Status da OS:",
+            options: ["Selecione o Status", "Concluido", "Finalizada", "Em Andamento" ]
+            }
           ].map((field) => (
             <div key={field.id} style={{ marginTop: "10px" }}>
               <label htmlFor={field.id}>{field.label}:</label>
