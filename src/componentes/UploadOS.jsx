@@ -231,6 +231,7 @@ const CadastroForm = () => {
                 "CAMERA FOTOGRAFICA",
                 "COMPUTADOR NÃO LIGA",
                 "CONEXÃO PROJETOR",
+                "EMPRÉSTIMO",
                 "FALHA DE LOGIN SERVIDOR",
                 "FALHA IMPRESSORA",
                 "FALHA ROTEADOR",
