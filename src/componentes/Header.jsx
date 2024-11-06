@@ -16,7 +16,7 @@ export default function Header() {
 
   const logoStyle = {
     width: '100px',
-    marginLeft: '20px',
+    marginLeft: '30px',
     marginRight: '20px',
   };
 

@@ -70,7 +70,6 @@
 // export default ListControle;
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const ListControle = () => {
   const [error, setError] = useState(null); // Mensagem de erro
@@ -111,52 +110,56 @@ const ListControle = () => {
   };
 
   const logoStyle = {
-    width: "100px",
-    position: "relative",
-    left: "-40vh",
-    top: "1vh",
-  };
-
-  const h1Style = {
-    fontSize: "40px",
-    display: "inline-block",
-    verticalAlign: "center",
-    color: "white",
-    marginRight: "100px",
-  };
-
-  const homeIconStyle = {
+    width: '80px',
+    height: "40px",
     cursor: "pointer",
-    marginRight: "20px",
   };
 
-  const iconImgStyle = {
-    position: "relative",
-    left: "97vh",
-    width: "40px",
-    top: "-12vh",
-  };
+  const styles ={
+    header: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "10px",
+      backgroundColor: "#00009C",
+      color: "white",
+      position: "fixed",
+      top: 0,
+      zIndex: 1000,
+    },
+  }
   return (
     <div
       style={{
-        padding: "20px",
-        backgroundColor: "#00009c",
+        fontFamily: "Arial, sans-serif",
+        background: "linear-gradient(to bottom, #9ba194, #9ba194)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         minHeight: "100vh",
-      }}
-    >
-      <header style={{ textAlign: "center", marginBottom: "20px" }}>
+        paddingTop: "2px",
+        padding: "20px",
+        position: 'relative',
+        top: "8vh"
+      }}>
+      <div style={styles.header}>
         <img
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
-          alt="Logo Instituto Reciclar"
+          alt="Logo Esquerdo"
           style={logoStyle}
+          onClick={irParaHome}
         />
-        <h1 style={h1Style}>Controle Diário </h1>
-        <div className="home-icon" style={homeIconStyle}>
-          <Link to={"/Lista_Controles"}>
-            <img src="/saida.png" alt="Home" style={iconImgStyle} />
-          </Link>
-        </div>
-      </header>
+        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
+          Controle de Equipamentos
+        </h1>
+        <img
+          src="/saida.png"
+          alt="Home"
+          style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
+          onClick={irParaHome}
+        />
+      </div>
       {isLoading && (
         <p style={{ textAlign: "center", color: "#F20DE7" }}>
           Carregando dados...
