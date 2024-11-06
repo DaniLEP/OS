@@ -2,22 +2,22 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   const headerStyle = {
-    backgroundColor: '#00009C',
-    color: 'white',
-    padding: '10px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    position: 'fixed', // Fixa o header no topo
-    top: '0', // Coloca no topo da página
-    width: '100%', // Ocupa toda a largura
-    zIndex: '1000', // Mantém o header acima de outros elementos
-  };
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "10px",
+      backgroundColor: "#00009C",
+      color: "white",
+      position: "fixed",
+      top: 0,
+      zIndex: 1000,
+    };
 
   const logoStyle = {
-    width: '100px',
-    marginLeft: '30px',
-    marginRight: '20px',
+    width: '110px',
+    height: "70px",
+    cursor: "pointer",
   };
 
   const h1Style = {
