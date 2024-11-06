@@ -66,7 +66,7 @@ export default function ListControl() {
                             <Link to="/Controle_OS" style={{ textDecoration: "none", color: "inherit" }}>
                                 <img 
                                     src="/os.png" 
-                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem" }} 
+                                    style={{ height: "140px", maxHeight: "140px", marginBottom: "1rem" }} 
                                     alt="Proteinas" 
                                 />
                                 <h2 
@@ -107,7 +107,7 @@ export default function ListControl() {
                             <Link to="/Controle_Equipamentos" style={{ textDecoration: "none", color: "inherit" }}>
                                 <img 
                                     src="/controle.png" 
-                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem" }} 
+                                    style={{ height: "150px", maxHeight: "140px", marginBottom: "1rem" }} 
                                     alt="Mantimentos" 
                                 />
                                 <h2 
