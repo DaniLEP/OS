@@ -43,13 +43,28 @@ const ListOS = () => {
   // Estilos CSS em objetos para manter o código limpo e modular
   const styles = {
     container: {
-      padding: "20px",
-      backgroundColor: "#00009c",
+      fontFamily: "Arial, sans-serif",
+      background: "linear-gradient(to bottom, #9ba194, #9ba194)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       minHeight: "100vh",
+      paddingTop: "2px",
+      padding: "20px",
+      position: 'relative',
+      top: "8vh"
     },
     header: {
-      textAlign: "center",
-      marginBottom: "20px",
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "10px",
+      backgroundColor: "#00009C",
+      color: "white",
+      position: "fixed",
+      top: 0,
+      zIndex: 1000,
     },
     logo: {
       width: "100px",
@@ -93,22 +108,33 @@ const ListOS = () => {
     },
   };
 
+  
+  const logoStyle = {
+    width: '70px',
+    height: "40px",
+    cursor: "pointer",
+    
+  };
+
   return (
     <div style={styles.container}>
-      <header style={styles.header}>
+         <div style={styles.header}>
         <img
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
-          alt="Logo Instituto Reciclar"
-          style={styles.logo}
+          alt="Logo Esquerdo"
+          style={logoStyle}
           onClick={irParaHome}
         />
-        <h1 style={styles.title}>Lista de OS</h1>
-        <div className="home-icon" style={styles.homeIcon}>
-          <Link to={"/Lista_Controles"}>
-            <img src="/saida.png" alt="Home" style={styles.homeImage} />
-          </Link>
-        </div>
-      </header>
+        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
+          Lista de OS
+        </h1>
+        <img
+          src="/saida.png"
+          alt="Home"
+          style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
+          onClick={irParaHome}
+        />
+      </div>
       {isLoading && <p style={styles.loading}>Carregando dados...</p>}
       {error && <p style={styles.error}>Erro: {error}</p>}
       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRoS3n8ml9P_80I30zlTyWtGRnj3UVTPZ-wo86thagwT3ofUloRCGlrJdxDFrfGQuRURLAN6UJpKfQp/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
