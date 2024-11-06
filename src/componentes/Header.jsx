@@ -61,7 +61,7 @@ export default function Header() {
       />
       <h1 style={styles.h1}>Home</h1>
       <div style={styles.homeIcon}>
-        <Link to={"/Lista_Controles"}>
+        <Link to={"/"}>
           <img src="/saida.png" alt="Home" style={styles.iconImg} />
         </Link>
       </div>
