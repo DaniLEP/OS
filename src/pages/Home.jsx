@@ -26,7 +26,7 @@ export default function Home() {
     width: "100%", // A imagem ocupa 100% da largura do container
     height: "auto", // Mantém a proporção da imagem
     cursor: "pointer",
-    transition: "transform 0.5s", // Animação suave
+    transition: "transform 0.6s", // Animação suave
     position: 'relative',
     top: '10vh',
   };
@@ -38,7 +38,7 @@ export default function Home() {
         <div style={containerStyle}>
           <Link to="/Cadastro" style={linkStyle}>
             <img
-              src="/cadastro1.png"
+              src="/cadastros.png"
               alt="Cadastro"
               style={imgStyle}
               onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
@@ -48,17 +48,19 @@ export default function Home() {
 
           <Link to="/Lista_Controles" style={linkStyle}>
             <img
-              src="/os.png"
+              src="/Lista.png"
               alt="Controles"
               style={imgStyle}
               onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
               onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
+            <br />
+
           </Link>
 
           <Link to="#" style={linkStyle}>
             <img
-              src="/relatórios.png"
+              src="/dashboard.png"
               alt="Relatórios"
               style={imgStyle}
               onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}

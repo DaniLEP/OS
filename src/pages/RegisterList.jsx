@@ -66,7 +66,7 @@ export default function RegisterList() {
                             <Link to="/Cadastro_OS" style={{ textDecoration: "none", color: "inherit" }}>
                                 <img 
                                     src="/os.png" 
-                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem" }} 
+                                    style={{ height: "140px", maxHeight: "140px", marginBottom: "1rem" }} 
                                     alt="Proteinas" 
                                 />
                                 <h2 
@@ -106,8 +106,8 @@ export default function RegisterList() {
                         >
                             <Link to="/Cadastro_diario" style={{ textDecoration: "none", color: "inherit" }}>
                                 <img 
-                                    src="/cadastros.png" 
-                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem" }} 
+                                    src="/REGISTER.png" 
+                                    style={{ height: "140px", maxHeight: "140px", marginBottom: "1rem" }} 
                                     alt="Mantimentos" 
                                 />
                                 <h2 
