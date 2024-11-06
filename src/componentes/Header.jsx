@@ -59,7 +59,7 @@ export default function Header() {
         alt="Logo Instituto Reciclar"
         style={styles.logo}
       />
-      <h1 style={styles.h1}>T.I - Insituto Reciclar</h1>
+      <h1 style={styles.h1}>Home</h1>
       <div style={styles.homeIcon}>
         <Link to={"/Lista_Controles"}>
           <img src="/saida.png" alt="Home" style={styles.iconImg} />
