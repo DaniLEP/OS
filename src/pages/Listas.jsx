@@ -71,7 +71,7 @@ export default function ListControl() {
                                 />
                                 <h2 
                                     style={{
-                                        color: "black",
+                                        color: '#7500cc',
                                         fontSize: "1.5rem", // 24px
                                         fontWeight: "600",
                                     }}
@@ -112,7 +112,7 @@ export default function ListControl() {
                                 />
                                 <h2 
                                     style={{
-                                        color: "black",
+                                        color: '#7500cc',
                                         fontSize: "1.5rem",
                                         fontWeight: "600",
                                     }}
@@ -147,15 +147,15 @@ export default function ListControl() {
                         >
                             <Link to="/Home" style={{ textDecoration: "none", color: "inherit" }}>
                                 <img 
-                                    src="/return.svg" 
-                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem" }} 
+                                    src="/return.png" 
+                                    style={{ height: "100px", maxHeight: "140px", marginBottom: "1rem",  }} 
                                     alt="Voltar" 
                                 />
                                 <h2 
                                     style={{
-                                        color: "black",
                                         fontSize: "1.5rem",
                                         fontWeight: "600",
+                                        color: '#7500cc'
                                     }}
                                 >
                                     Voltar para Home
