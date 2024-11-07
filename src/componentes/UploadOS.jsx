@@ -281,7 +281,7 @@ const CadastroForm = () => {
             },
             {
               id: "status",
-              label: "Status da OS:",
+              label: "Status da OS",
             options: ["Selecione o Status", "Concluido", "Finalizada", "Em Andamento" ]
             }
           ].map((field) => (

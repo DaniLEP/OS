@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { format } from "date-fns";
 
 const DataForm = () => {
   const [formData, setFormData] = useState({
@@ -9,8 +10,6 @@ const DataForm = () => {
     manutencao: "",
     solucionado: "",
     dia: "",
-    mes: "",
-    ano: "",
   });
 
   const handleChange = (e) => {
@@ -23,17 +22,18 @@ const DataForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(
-      "https://script.google.com/macros/s/AKfycbziLxygw1nUFcXMqfKqtCxCsQr_fvsegk0U81E2GUmPi2Kl9vPNdJfgMKoouv3I-AXq/exec",
-      {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    )
+
+    // Formata a data para o formato "dd/MM/yyyy" antes de enviar
+    const dataFormatada = formData.dia ? format(new Date(formData.dia), "dd/MM/yyyy") : "";
+
+    fetch("https://script.google.com/macros/s/AKfycby8qvxt1Y6Q8IQDaIkRokmVKbXLAPyqQyolxP0v8dc5VK2lmiRxr5wJ6IOMpSL1AAMnAg/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...formData, dia: dataFormatada }),
+    })
       .then(() => {
         alert("OS salva com sucesso!");
         setFormData({
@@ -42,8 +42,6 @@ const DataForm = () => {
           manutencao: "",
           solucionado: "",
           dia: "",
-          mes: "",
-          ano: "",
         });
       })
       .catch((error) => console.error("Erro:", error));
@@ -56,14 +54,11 @@ const DataForm = () => {
       manutencao: "",
       solucionado: "",
       dia: "",
-      mes: "",
-      ano: "",
     });
   };
 
-  const navigate = useNavigate()
-
-  const handleHome = () => navigate ("/Cadastro")
+  const navigate = useNavigate();
+  const handleHome = () => navigate("/Cadastro");
 
   const logoStyle = {
     position: 'relative',
@@ -98,15 +93,6 @@ const DataForm = () => {
       top: 0,
       zIndex: 1000,
     },
-    logo: {
-      width: "80px",
-      marginBottom: "10px",
-    },
-    h1: {
-      fontSize: "1.8em",
-      color: "white",
-      textAlign: "center",
-    },
     form: {
       display: "flex",
       flexDirection: "column",
@@ -131,10 +117,6 @@ const DataForm = () => {
       borderRadius: "4px",
       cursor: "pointer",
     },
-    homeIcon: {
-      cursor: "pointer",
-      marginTop: "10px",
-    },
   };
 
   return (
@@ -146,9 +128,8 @@ const DataForm = () => {
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1
-        style={{ marginLeft: -55, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
-          Cadastro de Diário
+        <h1 style={{ marginLeft: -55, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
+          Cadastro Diário
         </h1>
         <img
           src="/saida.png"
@@ -195,9 +176,11 @@ const DataForm = () => {
           <option value="">Problema foi solucionado?</option>
           <option value="Sim">Sim</option>
           <option value="Não">Não</option>
+          <option value="Descarte">Descarte</option>
+          <option value="Não tem computador em manutenção">Não tem computador em manutenção</option>
         </select>
         <input
-          type="text"
+          type="date"
           name="dia"
           value={formData.dia}
           onChange={handleChange}
@@ -205,37 +188,7 @@ const DataForm = () => {
           required
           style={styles.input}
         />
-        <select
-          name="mes"
-          value={formData.mes}
-          onChange={handleChange}
-          required
-          style={styles.input}
-        >
-          <option value="">Selecione o mês</option>
-          <option value="Janeiro">Janeiro</option>
-          <option value="Fevereiro">Fevereiro</option>
-          <option value="Março">Março</option>
-          <option value="Abril">Abril</option>
-          <option value="Maio">Maio</option>
-          <option value="Junho">Junho</option>
-          <option value="Julho">Julho</option>
-          <option value="Agosto">Agosto</option>
-          <option value="Setembro">Setembro</option>
-          <option value="Outubro">Outubro</option>
-          <option value="Novembro">Novembro</option>
-          <option value="Dezembro">Dezembro</option>
-          {/* demais opções de meses */}
-        </select>
-        <input
-          type="number"
-          name="ano"
-          value={formData.ano}
-          onChange={handleChange}
-          placeholder="Digite o ano:"
-          required
-          style={styles.input}
-        />
+       
         <motion.button
           type="submit"
           whileHover={{ scale: 1.05 }}
