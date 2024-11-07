@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const DataForm = () => {
   const [formData, setFormData] = useState({
@@ -60,7 +61,9 @@ const DataForm = () => {
     });
   };
 
-  const handleHome = () => (window.location.href = "/Cadastro");
+  const navigate = useNavigate()
+
+  const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
     width: "80px",

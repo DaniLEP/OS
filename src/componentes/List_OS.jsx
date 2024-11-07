@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ListOS = () => {
   const [error, setError] = useState(null);
@@ -36,9 +36,9 @@ const ListOS = () => {
   }, []);
 
   // Função de redirecionamento para a página inicial
-  const irParaHome = () => {
-    window.location.href = "/Lista_Controles";
-  };
+  const navigate = useNavigate()
+
+  const handleHome = () => navigate ("/Cadastro")
 
   // Estilos CSS em objetos para manter o código limpo e modular
   const styles = {
@@ -123,7 +123,7 @@ const ListOS = () => {
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
           alt="Logo Esquerdo"
           style={logoStyle}
-          onClick={irParaHome}
+          onClick={handleHome}
         />
         <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
           Lista de OS
@@ -132,7 +132,7 @@ const ListOS = () => {
           src="/saida.png"
           alt="Home"
           style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
-          onClick={irParaHome}
+          onClick={handleHome}
         />
       </div>
       {isLoading && <p style={styles.loading}>Carregando dados...</p>}

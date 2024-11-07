@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CadastroForm = () => {
   const initialFormData = {
@@ -40,7 +41,9 @@ const CadastroForm = () => {
 
   const handleReset = () => setFormData(initialFormData);
 
-  const handleHome = () => (window.location.href = "/Cadastro");
+  const navigate = useNavigate()
+
+  const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
     width: '80px',

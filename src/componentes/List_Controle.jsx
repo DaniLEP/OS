@@ -70,6 +70,7 @@
 // export default ListControle;
 
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListControle = () => {
   const [error, setError] = useState(null); // Mensagem de erro
@@ -105,9 +106,9 @@ const ListControle = () => {
     fetchOSData(); // Chama a função ao montar o componente
   }, []); // [] garante que a função seja chamada apenas uma vez ao montar
   // CSS DA HEADER
-  const irParaHome = () => {
-    window.location.href = "/Lista_Controles"; // Substitua pelo caminho correto para a página inicial
-  };
+  const navigate = useNavigate()
+
+  const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
     width: '80px',
@@ -148,7 +149,7 @@ const ListControle = () => {
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
           alt="Logo Esquerdo"
           style={logoStyle}
-          onClick={irParaHome}
+          onClick={handleHome}
         />
         <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
           Controle de Equipamentos
@@ -157,7 +158,7 @@ const ListControle = () => {
           src="/saida.png"
           alt="Home"
           style={{ height: "40px", cursor: "pointer", marginRight: "20px" }}
-          onClick={irParaHome}
+          onClick={handleHome}
         />
       </div>
       {isLoading && (
