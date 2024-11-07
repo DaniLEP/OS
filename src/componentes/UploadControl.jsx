@@ -66,10 +66,13 @@ const DataForm = () => {
   const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
-    width: "80px",
-    height: "40px",
+    position: 'relative',
+    right: '-20px',
+    width: '21vh',
+    height: "60px",
     cursor: "pointer",
   };
+
   const styles = {
     container: {
       fontFamily: "Arial, sans-serif",
@@ -78,7 +81,7 @@ const DataForm = () => {
       flexDirection: "column",
       alignItems: "center",
       minHeight: "100vh",
-      paddingTop: "10px",
+      paddingTop: "26px",
       padding: "20px",
       position: 'relative',
       top: "9vh"
@@ -144,13 +147,7 @@ const DataForm = () => {
           onClick={handleHome}
         />
         <h1
-          style={{
-            margin: 0,
-            flexGrow: 1,
-            textAlign: "center",
-            fontSize: "1.2rem",
-          }}
-        >
+        style={{ marginLeft: -55, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
           Cadastro de Diário
         </h1>
         <img

@@ -105,14 +105,19 @@ const ListControle = () => {
   useEffect(() => {
     fetchOSData(); // Chama a função ao montar o componente
   }, []); // [] garante que a função seja chamada apenas uma vez ao montar
-  // CSS DA HEADER
+
   const navigate = useNavigate()
 
-  const handleHome = () => navigate ("/Cadastro")
+  const handleHome = () => navigate ("/Lista_Controles")
+
+  // CSS DA HEADER
+
 
   const logoStyle = {
-    width: '80px',
-    height: "40px",
+    position: 'relative',
+    right: '-20px',
+    width: '21vh',
+    height: "60px",
     cursor: "pointer",
   };
 
@@ -151,7 +156,7 @@ const ListControle = () => {
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
+        <h1 style={{ marginLeft: -5, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
           Controle de Equipamentos
         </h1>
         <img

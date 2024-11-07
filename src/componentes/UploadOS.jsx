@@ -46,8 +46,10 @@ const CadastroForm = () => {
   const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
-    width: '80px',
-    height: "40px",
+    position: 'relative',
+    right: '-20px',
+    width: '21vh',
+    height: "60px",
     cursor: "pointer",
   };
 
@@ -88,6 +90,12 @@ const CadastroForm = () => {
       alignItems: "center",
       gap: "10px",
     },
+    input1: {
+      padding: "8px",
+      marginTop: "5px",
+      width: "97%",
+      fontSize: "1rem",
+    },
     input: {
       padding: "8px",
       marginTop: "5px",
@@ -121,7 +129,7 @@ const CadastroForm = () => {
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1 style={{ margin: 0, flexGrow: 1, textAlign: "center", fontSize: "1.2rem" }}>
+        <h1  style={{ marginLeft: -55, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
           Cadastro de OS
         </h1>
         <img
@@ -147,7 +155,7 @@ const CadastroForm = () => {
                   id={field.id}
                   value={formData[field.id]}
                   onChange={handleChange}
-                  style={styles.input}
+                  style={styles.input1}
                 />
               ) : (
                 <input
@@ -156,7 +164,7 @@ const CadastroForm = () => {
                   value={formData[field.id]}
                   onChange={handleChange}
                   required
-                  style={styles.input}
+                  style={styles.input1}
                 />
               )}
             </div>
