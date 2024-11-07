@@ -48,7 +48,7 @@ const CadastroForm = () => {
   const logoStyle = {
     position: 'relative',
     right: '-20px',
-    width: '21vh',
+    width: '17vh',
     height: "60px",
     cursor: "pointer",
   };
