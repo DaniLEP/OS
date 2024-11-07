@@ -106,22 +106,21 @@ const ListControle = () => {
     fetchOSData(); // Chama a função ao montar o componente
   }, []); // [] garante que a função seja chamada apenas uma vez ao montar
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleHome = () => navigate ("/Lista_Controles")
+  const handleHome = () => navigate("/Lista_Controles");
 
   // CSS DA HEADER
 
-
   const logoStyle = {
-    position: 'relative',
-    right: '-20px',
-    width: '21vh',
+    position: "relative",
+    right: "-20px",
+    width: "17vh",
     height: "60px",
     cursor: "pointer",
   };
 
-  const styles ={
+  const styles = {
     header: {
       width: "100%",
       display: "flex",
@@ -134,7 +133,7 @@ const ListControle = () => {
       top: 0,
       zIndex: 1000,
     },
-  }
+  };
   return (
     <div
       style={{
@@ -146,9 +145,10 @@ const ListControle = () => {
         minHeight: "100vh",
         paddingTop: "2px",
         padding: "20px",
-        position: 'relative',
-        top: "8vh"
-      }}>
+        position: "relative",
+        top: "8vh",
+      }}
+    >
       <div style={styles.header}>
         <img
           src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
@@ -156,7 +156,15 @@ const ListControle = () => {
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1 style={{ marginLeft: -5, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
+        <h1
+          style={{
+            marginLeft: -5,
+            flexGrow: 1,
+            textAlign: "center",
+            fontSize: "23px",
+            fontFamily: "italic",
+          }}
+        >
           Controle de Equipamentos
         </h1>
         <img
@@ -176,7 +184,7 @@ const ListControle = () => {
       )}
       {/* Aqui está o iframe adicionado */}
       <iframe
-       src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTdHXKmKVaLEIaMOgnp2Avm0m2B9qFYwf-2BlmgbTDLVAD5mkX6UIxBc-UbsaDGlAeI1oH288gtgC8Z/pubhtml?gid=1450037444&amp;single=true&amp;widget=true&amp;headers=false"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTdHXKmKVaLEIaMOgnp2Avm0m2B9qFYwf-2BlmgbTDLVAD5mkX6UIxBc-UbsaDGlAeI1oH288gtgC8Z/pubhtml?widget=true&amp;headers=false"
         width="100%"
         height="550"
         style={{

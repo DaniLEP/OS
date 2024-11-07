@@ -113,11 +113,10 @@ const ListOS = () => {
   const logoStyle = {
     position: 'relative',
     right: '-20px',
-    width: '21vh',
+    width: '17vh',
     height: "60px",
     cursor: "pointer",
   };
-
   return (
     <div style={styles.container}>
          <div style={styles.header}>
@@ -140,7 +139,7 @@ const ListOS = () => {
       {isLoading && <p style={styles.loading}>Carregando dados...</p>}
       {error && <p style={styles.error}>Erro: {error}</p>}
       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRoS3n8ml9P_80I30zlTyWtGRnj3UVTPZ-wo86thagwT3ofUloRCGlrJdxDFrfGQuRURLAN6UJpKfQp/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-        style={styles.iframe}
+         style={styles.iframe}
         title="Planilha Servidores"
       />
     </div>
