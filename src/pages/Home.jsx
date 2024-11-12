@@ -58,7 +58,7 @@ export default function Home() {
 
           </Link>
 
-          <Link to="#" style={linkStyle}>
+          <Link to="/Dashboard" style={linkStyle}>
             <img
               src="/dashboard.png"
               alt="Relatórios"

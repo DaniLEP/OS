@@ -14,6 +14,8 @@ import ListOS from "./componentes/List_OS.jsx";
 import ListControl from "./pages/Listas.jsx";
 import RegisterList from "./pages/RegisterList.jsx";
 import ErrorPage from "./componentes/errorPage.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import DashOS from "./componentes/Dash_OS.jsx";
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: '/Cadastro',
         element: <RegisterList/>,
+      },
+      {
+        path: '/Dashboard',
+        element: <Dashboard/>,
+      },
+      {
+        path: '/DashOS',
+        element: <DashOS/>,
       },
     ],
   },
