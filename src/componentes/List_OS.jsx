@@ -38,7 +38,7 @@ const ListOS = () => {
   // Função de redirecionamento para a página inicial
   const navigate = useNavigate();
 
-  const handleHome = () => navigate("/Lista_Controles");j
+  const handleHome = () => navigate("/Lista_Controles");
 
 
   // Estilos CSS em objetos para manter o código limpo e modular
