@@ -209,7 +209,6 @@ const CadastroForm = () => {
                 "Maria das Neves Amador Umbelino",
                 "Maria José dos Santos",
                 "Maria Mislene Pereira Lages",
-                "Natália Rosa Muniz Sierpinski",
                 "Paulo Henrique Yaekashi",
                 "Rafael de Souza Villares",
                 "Rosilene Teodora Batista de Sousa",
@@ -229,7 +228,8 @@ const CadastroForm = () => {
                 "EQUIPE/EDUCACIONAL",
                 "JOVENS/EDUCACIONAL",
                 "RH",
-                "T.I"
+                "T.I",
+                "ALMOXARIAFADO"
               ],
             },
             {
