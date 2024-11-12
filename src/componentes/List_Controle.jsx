@@ -93,7 +93,7 @@ const ListControle = () => {
       }
       const data = await response.json();
       console.log("Dados recebidos:", data);
-      // Não é mais necessário processar os dados, pois não estamos exibindo a lista.
+      // Não é mais necessário processar os dados, pois não exibe exibindo a lista.
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
       setError(error.message); // Armazena a mensagem de erro no estado
