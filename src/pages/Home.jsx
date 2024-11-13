@@ -7,7 +7,7 @@ export default function Home() {
     justifyContent: "space-around",
     width: "80%",
     position: 'relative',
-    top:'5vh', // Largura mais flexível para maior adaptação
+    top:'25vh', // Largura mais flexível para maior adaptação
     flexWrap: "wrap", // Permite quebrar linha em telas menores
     margin: "0 auto", // Centraliza o container na página
     backgroundColor: 'white',
@@ -27,8 +27,6 @@ export default function Home() {
     height: "auto", // Mantém a proporção da imagem
     cursor: "pointer",
     transition: "transform 0.6s", // Animação suave
-    position: 'relative',
-    top: '10vh',
   };
 
   return (

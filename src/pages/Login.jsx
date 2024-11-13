@@ -52,8 +52,9 @@ export default function Login() {
       fontSize: '24px',
     },
     logo: {
-      width: '80px',
-      marginBottom: '20px',
+      width: 150,
+      marginRight: -32,
+      marginBottom: '10px',
     },
     label: {
       display: 'block',
@@ -99,7 +100,7 @@ export default function Login() {
     <div style={styles.body}>
       <div style={styles.loginContainer}>
         <img
-          src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
+          src="/Reciclar.png"
           alt="Logo da Reciclar"
           style={styles.logo}
         />
