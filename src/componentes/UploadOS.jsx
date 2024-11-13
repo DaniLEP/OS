@@ -46,11 +46,10 @@ const CadastroForm = () => {
   const handleHome = () => navigate ("/Cadastro")
 
   const logoStyle = {
-    position: 'relative',
-    right: '-20px',
-    width: '17vh',
-    height: "60px",
-    cursor: "pointer",
+    maxWidth: '100%', // Garante que a logo seja escalada de forma adequada sem perder qualidade
+    height: 'auto', // Mantém a proporção da logo
+    maxHeight: '60px', // Limita a altura máxima para evitar distorções
+    cursor: 'pointer',
   };
 
   const styles = {
@@ -69,7 +68,7 @@ const CadastroForm = () => {
     header: {
       width: "100%",
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "center", // Centraliza os itens no header
       alignItems: "center",
       padding: "10px",
       backgroundColor: "#00009C",
@@ -77,6 +76,13 @@ const CadastroForm = () => {
       position: "fixed",
       top: 0,
       zIndex: 1000,
+      boxSizing: "border-box", // Garante que o padding não cause overflow
+    },
+    logo: {
+      maxWidth: '100%', // Garante que a logo seja escalada de forma adequada sem perder qualidade
+      height: 'auto', // Mantém a proporção da logo
+      maxHeight: '60px', // Limita a altura máxima para evitar distorções
+      cursor: 'pointer',
     },
     formWrapper: {
       background: "white",
@@ -89,6 +95,7 @@ const CadastroForm = () => {
       flexDirection: "column",
       alignItems: "center",
       gap: "10px",
+      marginTop: '5vh'
     },
     input1: {
       padding: "8px",
@@ -124,13 +131,13 @@ const CadastroForm = () => {
     <div style={styles.container}>
       <div style={styles.header}>
         <img
-          src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
+          src="/Logo.png"
           alt="Logo Esquerdo"
           style={logoStyle}
           onClick={handleHome}
         />
-        <h1  style={{ marginLeft: -55, flexGrow: 1, textAlign: "center", fontSize: "23px", fontFamily: 'italic' }}>
-          Cadastro de OS
+        <h1 style={{ marginLeft: 1, flexGrow: 1, textAlign: "center", fontSize: "25px", fontFamily: 'italic' }}>
+        Cadastro de OS
         </h1>
         <img
           src="/saida.png"

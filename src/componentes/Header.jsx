@@ -32,14 +32,14 @@ export default function Header() {
       zIndex: 1000,
     },
     logo: {
-      width: isMobile ? "90px" : "110px",
-      height: isMobile ? "50px" : "70px",
+      width: isMobile ? 180 : 250,
+      height: isMobile ? 60 : 80,
       cursor: "pointer",
     },
     h1: {
       fontSize: isMobile ? "24px" : "30px",
       display: "inline-block",
-      marginLeft: isMobile ? "0" : "-50px",
+      marginLeft: isMobile ? -75 : "-165px",
     },
     homeIcon: {
       cursor: "pointer",
@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <header style={styles.header}>
       <img
-        src="/Reciclar_Logo_Principal_Vertical_Negativo.png"
+        src="/Logo.png"
         alt="Logo Instituto Reciclar"
         style={styles.logo}
       />
